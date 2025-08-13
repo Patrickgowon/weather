@@ -1,0 +1,115 @@
+.forecast {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .forecast h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .forecast-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(52, 152, 219, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .forecast-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(52, 152, 219, 0.1);
+  }
+  
+  .day-name {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .day-temps {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .max-temp {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .min-temp {
+    color: #666;
+  }
+  
+  /* Weather icon specific styles */
+  .forecast-day .fa {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+  }
+  
+  .forecast-day .fa-sun {
+    color: #f39c12;
+  }
+  
+  .forecast-day .fa-cloud-sun {
+    color: #f1c40f;
+  }
+  
+  .forecast-day .fa-cloud {
+    color: #95a5a6;
+  }
+  
+  .forecast-day .fa-cloud-rain {
+    color: #3498db;
+  }
+  
+  .forecast-day .fa-cloud-bolt {
+    color: #9b59b6;
+  }
+  
+  .forecast-day .fa-snowflake {
+    color: #1abc9c;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .forecast-days {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .forecast-days {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .forecast-day {
+      padding: 0.8rem;
+    }
+    
+    .day-name {
+      font-size: 1rem;
+    }
+    
+    .forecast-day .fa {
+      font-size: 1.5rem;
+    }
+  }

@@ -1,0 +1,83 @@
+.toggle-unit {
+    display: flex;
+    align-items: center;
+  }
+  
+  .unit-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    height: 36px;
+    padding: 0 8px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .unit-btn span {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-color);
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+  
+  .unit-btn:hover {
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+  }
+  
+  .toggle-switch {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 36px;
+    height: 28px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+  
+  .toggle-switch.celsius {
+    transform: translateX(0);
+  }
+  
+  .toggle-switch.fahrenheit {
+    transform: translateX(38px);
+  }
+  
+  /* Active state text colors */
+  .unit-btn.active span:first-child {
+    color: white;
+  }
+  
+  .unit-btn:not(.active) span:last-child {
+    color: white;
+  }
+  
+  /* Accessibility focus styles */
+  .unit-btn:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .unit-btn {
+      background: #333;
+      border-color: #4CAF50;
+    }
+    
+    .unit-btn span {
+      color: #4CAF50;
+    }
+    
+    .toggle-switch {
+      background-color: #4CAF50;
+    }
+  }

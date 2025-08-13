@@ -1,0 +1,39 @@
+.weather-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .weather-temp {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+  
+  .weather-desc {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: left;
+  }
+  
+  .weather-details div {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+  }
